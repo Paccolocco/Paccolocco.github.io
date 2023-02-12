@@ -89,6 +89,7 @@ function buildControls() {
 
 
 function animate() {
+    requestAnimationFrame(animate);
 
     var delta = clock.getDelta();
 
@@ -96,7 +97,6 @@ function animate() {
     Player.updateControls( camera, controls, delta );
     Environment.updateEnvironment(delta, controls);
 
-    requestAnimationFrame(animate);
 
     renderer.render(scene, camera);
 }
