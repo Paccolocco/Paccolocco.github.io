@@ -455,6 +455,7 @@ function loadModelingGoal4and7(loader, texLoader){
         let scanMixer = new THREE.AnimationMixer(object);
         mixers_environment.push(scanMixer); 
         scanMixer.clipAction(object.animations[0]).play();
+        scanMixer.timeScale = 3
 
         console.log(object.animations);
         console.log(mixers_environment.length);

@@ -4,8 +4,8 @@
             <title>Lenny Siol Portfolio</title>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1">
-            <script src="scripts.js"></script>
             <link rel="stylesheet" href="style.css">
+            <script type="module" src="threejs.js"></script>
         </head>
         <body>
             <div class="header">
@@ -52,12 +52,16 @@
                         </ul>  
                     </p>
                 </div>
-                <div class="main">     
+                <div class="main">
+                    <canvas class="webgl" id="threeCanvas" width="10" height="10"></canvas>
+                    <p>Here you can watch some boids exploring the universe. 
+                        Use the left mouse button to turn the camera and the right mouse button to move the camera.
+                        For more ThreeJs check out the Walkabout
+                    </p>
                 </div>
             </div>
-            <canvas class="webgl"><p>üüüüüüüüüüüüüüüüüü</p></canvas>
-            <script type="module" src="./threejs/FunWithThreeJs/main.js"></script>
             <div class="footer">
+                <p>Skybox provided by <a href=https://de.cleanpng.com/png-5qn8dm>CLEANPNG</a></p>
             </div>
         </body>
 </html>
