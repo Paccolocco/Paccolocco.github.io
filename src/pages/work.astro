@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <title>Lenny Siol</title>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="style.css">
+        </head>
+        <body>
+            <div class="header">
+                <h1>Internship</h1>
+                <p></p>
+            </div>
+            <div class="navbar">
+                <a href="index.html">Home</a>
+                <a href="games.html">Games</a>
+                <a href="scientific.html">Scientific Work</a>
+                <a href="3dmodel.html">3D Modeling</a>
+                <a href="work.html">Work Experience</a>
+                <a href="walkabout.html">ThreeJs Walkabout</a>
+                <a href="Contact.html" class="right">Contact</a>
+            </div>
+            <div class="row">
+                <div class="main">
+                    <h1>Playconda Internship</h1>
+                    <img src="internship/e40bce08-6215-4aeb-b84f-f716d62e5bde_rw_1920.jpg"  alt="Poster">
+                    <a href="https://playconda.com/" target="_blank">Website</a>
+                    <p>
+                        From the beginning of April 2021 to the end of July 2021 I interned at playconda GmbH developing new features for their mobile game "Idle Lemonade Tycoon".
+                        My work included C#/Unity programming using UniRx reactive programming and Firebase remote config, as well as creating Unity animations, transfering designer made assets into a Unity context and the creation of technical documents.
+                    </p>
+                    <h2>Entity Scrolling</h2>
+                    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Sq2AA5lGeqk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <p>
+                        As an introductory task I was asked to find my way around the code-base and use an already existing scrolling functions in order to create a new feature that lets the player scroll to a specific entity. As the game progresses more entities can be purchased, this will eventually lead long manual scrolling times. In order to somewhat circumvent these, I proposed a system with three buttons that take the player to three vital points: The most upper farm, the factory plus the lemon transport and the lowest pump. In order to achieve this, I implemented a system that finds the desired y-position of the entity and then passes it to an already existing auto-scrolling function. To integrate the feature into the game I created three buttons corresponding to the three positions. The buttons deactivate and shrink after a certain amount of time until the player taps them once or starts scrolling in order to have them block only a small amount of the screen when they are not in use. The button presses are registered using UniRx reactive programming in order to use less computational resources.
+                    </p>
+
+                    <h2>Modal Swiping</h2>
+                    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/AFSf72FT26Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <p>
+                        When wanting to upgrade an entity the player must click on its corresponding upgrade sign which in turn opens an upgrade modal. In the modal shows the player information about the entity and has a button that allows to increase its performance in exchange for currency. If the player now wants to upgrade more than one entity he would have to: open an upgrade modal, press the upgrade button, close the modal, scroll to the next entity and repeat the whole cycle. Since the game can currently have up to 35 entities these extra clicks add up. In order to simplify this process a system was proposed that lets the player swipe to the left and right in order to access the upgrade-modal of the entity directly below, or above the current one. I implemented two buttons on the left and the right side of the modal, pressing them updates the information of the modal to the one of next entity, scrolls the game in the background to the right position and plays an animation, that I created in unity, which makes clearer to the player that the entity related to the upgrade-modal has changed.
+                    </p>
+
+                    <h2>Daily Reward</h2>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/dm4e1Uw4hE4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <p>
+                        The daily reward feature rewards players for logging in daily, granting them a reward for each new day they log in. Completing this task required cooperation with the design department. Sketching out the layout of the related daily reward modal together with a designer, having assets created by them while I worked on the logic part of the task and then transferring them to the unity project. In a final step the designer looked at finished modal in unity and suggested changes before approving the implementation. I put a system in place that checks if a day has passed and if the last daily reward had been collected. If yes, the next reward would unlock, and the player could claim it. The rewards are loaded from a remote config JSON file using Firebase. The JSON file is downloaded and parsed into a set of rewards which are the given to a reward handler that keeps track of which rewards have been collected already, are available or still locked and updates the daily reward modal accordingly. The firebase file defines what kind of reward is given at a specified day, and which sprite and flavor text the daily reward modal will show.
+                    </p>
+
+                    <h2>Quest System</h2>
+                    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/--CjtyyjaL4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <p>
+                        The quest system is a feature that rewards players for completing different challenges and reaching milestones. It works in a way that the player is given a task such as upgrading an entity to a specified level and after doing so the player is given a reward. The system works in a way that there are different questlines, every questline holds a set of quests that have a graph like parent-child relationship. This allows to easily define the order of quests, change the order or add new quests in between already existing ones. Since the questlines are independent from each other they can also be parallelized, and different levels can have different quests while keeping track of the progress in other levels. The quests themselves keep track of the progress using so called quest-conditions that use UniRx to subscribe to specified parameters from the activation of the quest until its completion. The quest-conditions, rewards, parent-child relationship and other parameters are all stored remotely, making it easy to update or add quests. This is especially interesting for timed events since it doesn’t require a full game update but only the download of a small remote file. Similar to the daily reward task I first took a look on what other games do for comparable features, created a technical paper defining an MVP version of the feature and additional ideas as well as sketching out an introductory questline. Then I met with a designer discussing how the feature should look like visually. This time the implementation cycle also included a testing person that would test the feature on bugs and general feeling. In the end the quest system included a modal that would show the current quest, its progress and reward, and the already completed quests, for the introductory questline.
+                    </p>
+
+                    <h2>Save-game Patch</h2>
+                    <p>
+                        Since the game is going through a big refactoring that includes various changes to the save-game structure a patch had to be created, so that players that played before the update including the new save-game structure would keep their progress. In order to achieve this the current, save-game version is checked, if it is older than the current one the key value pairs from the save-game are read, their values are applied to the new corresponding keys, it is checked if every value from the old save-game is present in the new one and then the old key value pair is deleted. It is important to test this process with various old save-game files to make sure no values get lost in the transfer process, because a loss of progress might be very frustrating for the player.
+                    </p>
+
+                    <h2>Refactoring</h2>
+                    <p>
+                        As part of the refactoring mentioned in the Save-game Patch I refactored two different components. The first component stores information about the world such as the names, and upgrade parameters. Part of this task was also to make it possible to configure these parameters remotely. The second component holds references to the sprites used in the game. The task was to make it possible to load them dynamically since the refactoring would introduce a world switch feature, which requires fast sprite changes without having to load a new scene. As with the first component a remote configuration was also implemented.
+                    </p>
+
+                </div>
+            </div>
+            <div class="footer">
+
+            </div>
+        </body>
+</html>
