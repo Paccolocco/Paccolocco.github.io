@@ -1,41 +1,21 @@
-<!DOCTYPE html>
-    <html lang="en">
-        <head>
-            <title>Lenny Siol</title>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-            <link rel="stylesheet" href="style.css">
-        </head>
-        <body>
-            <div class="header">
-                <h1>Games</h1>
-                <p>And Game Related Software</p>
-            </div>
-            <div class="navbar">
-                <a href="index.html">Home</a>
-                <a href="games.html">Games</a>
-                <a href="scientific.html">Scientific Work</a>
-                <a href="3dmodel.html">3D Modeling</a>
-                <a href="work.html">Work Experience</a>
-                <a href="walkabout.html">ThreeJs Walkabout</a>
-                <a href="Contact.html" class="right">Contact</a>
-            </div>
-            <div class="row">
-                <div class="sideBarContainer">
-                    <div class="sideBar">
-                        <a href="games/LittleLightEngine.html">Little Light Engine</a>
-                        <a href="games/NarRobot.html">NarRobot</a>
-                        <a href="games/DanceBattle.html">Dance Battle</a>
-                        <a href="games/BlueDeath.html">Blue Death Wet-Temption</a>
-                    </div>
-                </div>
-                <div class="main">
-                    <img src="games/littleLightEngine/gl-poster.png" width="525" height="750" alt="Vampire Background">
-                    <img src="games/narRobot/NarRobot.png" width="525" height="750" alt="Vampire Background">
-                    <img src="games/danceBattle/dancebattleposter.jpg" width="525" height="750" alt="Vampire Background">
-                </div>
-            </div>
-            <div class="footer">
-            </div>
-        </body>
-</html>
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Lenny Siol" header="Games" subHeader="And Game Related Software">
+  <div class="row">
+    <div class="sideBarContainer">
+      <div class="sideBar">
+        <a href="games/LittleLightEngine.html">Little Light Engine</a>
+        <a href="games/NarRobot.html">NarRobot</a>
+        <a href="games/DanceBattle.html">Dance Battle</a>
+        <a href="games/BlueDeath.html">Blue Death Wet-Temption</a>
+      </div>
+    </div>
+    <div class="main">
+      <img src="games/littleLightEngine/gl-poster.png" width="525" height="750" alt="Vampire Background">
+      <img src="games/narRobot/NarRobot.png" width="525" height="750" alt="Vampire Background">
+      <img src="games/danceBattle/dancebattleposter.jpg" width="525" height="750" alt="Vampire Background">
+    </div>
+  </div>
+</BaseLayout>
