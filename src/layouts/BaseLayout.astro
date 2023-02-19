@@ -1,0 +1,37 @@
+---
+type Props = {
+  title: string,
+  header: string,
+  subHeader?: string
+}
+const { title, header, subHeader = "" } = Astro.props
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{title}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="threejs.js"></script>
+  </head>
+  <body>
+    <div class="header">
+      <h1>{header}</h1>
+      <p>{subHeader}</p>
+    </div>
+    <div class="navbar">
+      <a href="index.html">Home</a>
+      <a href="games.html">Games</a>
+      <a href="scientific.html">Scientific Work</a>
+      <a href="3dmodel.html">3D Modeling</a>
+      <a href="work.html">Work Experience</a>
+      <a href="walkabout.html">ThreeJs Walkabout</a>
+      <a href="Contact.html" class="right">Contact</a>
+    </div>
+    <slot />
+    <div class="footer">
+      <slot name="footer"/>
+    </div>
+  </body>
+</html>
