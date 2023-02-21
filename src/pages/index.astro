@@ -1,9 +1,10 @@
 ---
+import "../css/contentCommon.css";
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout title="Lenny Siol Portfolio" header="Lenny Siol" subHeader="Games Engineer">
-  <script slot="head" type="module" src="threejs.js"></script>
+  <script slot="head" type="module" src="threejs.js" defer></script>
 
   <div class="row">
     <div class="side">
@@ -48,3 +49,15 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
   <p slot="footer">Skybox provided by <a href="https://de.cleanpng.com/png-5qn8dm">CLEANPNG</a></p>
 </BaseLayout>
+
+<style>
+  /*
+  Create two unequal columns that sits next to each other
+  Sidebar/left column
+  */
+  .side {
+    flex: 20%; /* Set the width of the sidebar */
+    background-color: #f1f1f1; /* Grey background color */
+    padding: 20px; /* Some padding */
+  }
+</style>

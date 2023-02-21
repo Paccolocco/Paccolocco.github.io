@@ -1,0 +1,4 @@
+/* Ensure proper sizing */
+* {
+  box-sizing: border-box;
+}

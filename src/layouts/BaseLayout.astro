@@ -1,4 +1,5 @@
 ---
+import "../css/global.css"
 type Props = {
   title: string,
   header: string,
@@ -13,7 +14,6 @@ const { title, header, subHeader = "" } = Astro.props
     <title>{title}</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/style.css">
     <slot name="head" />
   </head>
   <body>
@@ -36,3 +36,65 @@ const { title, header, subHeader = "" } = Astro.props
     </div>
   </body>
 </html>
+
+<style>
+  body {
+    font-family: optima, sans-serif;
+    margin: 0;
+  }
+
+  /* header style */
+  .header {
+    padding: 20px;
+    text-align: center;
+    background: #bc3a1a;
+    color: white;
+  }
+  .header h1 {
+    font-size: 40px;
+  }
+  .header p {
+    text-align: center;
+  }
+
+  /* Style the top navigation bar */
+  .navbar {
+    overflow: hidden; /* Hide overflow */
+    background-color: #333; /* Dark background color */
+  }
+
+  /* Style the navigation bar links */
+  .navbar a {
+    float: left; /* Make sure that the links stay side-by-side */
+    display: block; /* Change the display to block, for responsive reasons (see below) */
+    color: white; /* White text color */
+    text-align: center; /* Center the text */
+    padding: 14px 20px; /* Add some padding */
+    text-decoration: none; /* Remove underline */
+  }
+
+  /* Right-aligned link */
+  .navbar a.right {
+    float: right; /* Float a link to the right */
+  }
+
+  /* Change color on hover/mouse-over */
+  .navbar a:hover {
+    background-color: #ddd; /* Grey background color */
+    color: black; /* Black text color */
+  }
+
+  /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+  @media screen and (max-width: 400px) {
+    .navbar a {
+      float: none;
+      width: 100%;
+    }
+  }
+
+  .footer {
+    padding: 20px; /* Some padding */
+    text-align: center; /* Center text*/
+    background: #ddd; /* Grey background */
+  }
+</style>
