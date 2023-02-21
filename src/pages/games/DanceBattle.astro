@@ -1,17 +1,11 @@
 ---
+import GamesSidebar from "../../components/GamesSidebar.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout title="Lenny Siol" header="Dance Battle" subHeader="Dance Your Way To The Top!">
   <div class="row">
-    <div class="sideBarContainer">
-      <div class="sideBar">
-        <a href="/games/LittleLightEngine.html">Little Light Engine</a>
-        <a href="/games/NarRobot.html">NarRobot</a>
-        <a href="/games/DanceBattle.html">Dance Battle</a>
-        <a href="/games/BlueDeath.html">Blue Death Wet-Temption</a>
-      </div>
-    </div>
+    <GamesSidebar />
     <div class="main">
       <div class="row">
         <iframe width="1600" height="900" src="https://www.youtube-nocookie.com/embed/VXSMHxbKRnQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
