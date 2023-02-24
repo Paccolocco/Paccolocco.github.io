@@ -2,9 +2,11 @@
 import "../../css/contentCommon.css";
 import GamesSidebar from "../../components/GamesSidebar.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+
+export const header = "Blue Death Wet-Temption"
 ---
 
-<BaseLayout title="Lenny Siol" header="Blue Death Wet-Temption" subHeader="A Game Created For Franken Game Jam 2021">
+<BaseLayout title="Lenny Siol" header={header} subHeader="A Game Created For Franken Game Jam 2021">
   <div class="row">
     <GamesSidebar />
     <div class="main">

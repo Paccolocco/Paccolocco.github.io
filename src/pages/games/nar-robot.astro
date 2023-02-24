@@ -2,9 +2,12 @@
 import "../../css/contentCommon.css";
 import GamesSidebar from "../../components/GamesSidebar.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+
+export const header = "NarRobot"
+export const priority = 10
 ---
 
-<BaseLayout title="Lenny Siol" header="NarRobot" subHeader="A Reeti-Unity Plugin">
+<BaseLayout title="Lenny Siol" header={header} subHeader="A Reeti-Unity Plugin">
   <div class="row">
     <GamesSidebar />
     <div class="main">

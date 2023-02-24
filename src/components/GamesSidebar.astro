@@ -1,9 +1,16 @@
+---
+import { loadGamePages } from "../scripts/gamePageLoader";
+
+const gamePages = await loadGamePages()
+---
+
 <div class="sideBarContainer">
   <div class="sideBar">
-    <a href="/games/little-light-engine">Little Light Engine</a>
-    <a href="/games/nar-robot">NarRobot</a>
-    <a href="/games/dance-battle">Dance Battle</a>
-    <a href="/games/blue-death">Blue Death Wet-Temption</a>
+    {
+      gamePages.map((gamePage) => {
+        return <a href={gamePage.url}>{gamePage.header}</a>
+      })
+    }
   </div>
 </div>
 

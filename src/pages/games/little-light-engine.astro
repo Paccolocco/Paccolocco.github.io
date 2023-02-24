@@ -2,9 +2,12 @@
 import "../../css/contentCommon.css";
 import GamesSidebar from "../../components/GamesSidebar.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+
+export const header = "Little Light Engine"
+export const priority = 10
 ---
 
-<BaseLayout title="Lenny Siol" header="Little Light Engine" subHeader="A C++ Game Engine from Scratch">
+<BaseLayout title="Lenny Siol" header={header} subHeader="A C++ Game Engine from Scratch">
   <div class="row">
     <GamesSidebar />
     <div class="main">

@@ -2,9 +2,11 @@
 import "../../css/contentCommon.css";
 import GamesSidebar from "../../components/GamesSidebar.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+
+export const header = "Dance Battle"
 ---
 
-<BaseLayout title="Lenny Siol" header="Dance Battle" subHeader="Dance Your Way To The Top!">
+<BaseLayout title="Lenny Siol" header={header} subHeader="Dance Your Way To The Top!">
   <div class="row">
     <GamesSidebar />
     <div class="main">
