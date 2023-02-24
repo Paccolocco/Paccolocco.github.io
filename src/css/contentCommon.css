@@ -29,7 +29,6 @@ The correct approach would be to use css modules (*.module.css) for reusable/mut
 }
 
 .main p {
-  width:75em;
   text-align:left;
   padding-left: 20px;
   padding-right: 20px;

@@ -1,6 +1,7 @@
 ---
 import "../css/contentCommon.css";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Rating from "../components/Rating.astro";
 ---
 
 <BaseLayout title="Lenny Siol Portfolio" header="Lenny Siol" subHeader="Games Engineer">
@@ -16,18 +17,18 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         I like to play and develop games, here's a quick overview of my skills:
 
         <h4>Programming Languages</h4>
-        <ul>
-          <li>C# &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="images/star_full.png" width="15" height="18" alt="Poster"> <img src="images/star_full.png" width="15" height="18" alt="Poster"> <img src="images/star_full.png" width="15" height="18" alt="Poster"> <img src="images/star_full.png" width="15" height="18" alt="Poster"> <img src="images/star_full.png" width="15" height="18" alt="Poster">  <img src="images/star_full.png" width="15" height="18" alt="Poster"> <img src="images/star_full.png" width="15" height="18" alt="Poster"> <img src="images/star_full.png" width="15" height="18" alt="Poster"> <img src="images/star_empty.png" width="15" height="18" alt="Poster"> <img src="images/star_empty.png" width="15" height="18" alt="Poster"></li>
-          <li>C++ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="images/star_full.png" width="15" height="18" alt="Poster"> <img src="images/star_full.png" width="15" height="18" alt="Poster"> <img src="images/star_full.png" width="15" height="18" alt="Poster"> <img src="images/star_full.png" width="15" height="18" alt="Poster"> <img src="images/star_full.png" width="15" height="18" alt="Poster">  <img src="images/star_full.png" width="15" height="18" alt="Poster"> <img src="images/star_full.png" width="15" height="18" alt="Poster"> <img src="images/star_empty.png" width="15" height="18" alt="Poster"> <img src="images/star_empty.png" width="15" height="18" alt="Poster"> <img src="images/star_empty.png" width="15" height="18" alt="Poster"></li>
-          <li>Java &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="images/star_full.png" width="15" height="18" alt="Poster"> <img src="images/star_full.png" width="15" height="18" alt="Poster"> <img src="images/star_full.png" width="15" height="18" alt="Poster"> <img src="images/star_full.png" width="15" height="18" alt="Poster"> <img src="images/star_empty.png" width="15" height="18" alt="Poster">  <img src="images/star_empty.png" width="15" height="18" alt="Poster"> <img src="images/star_empty.png" width="15" height="18" alt="Poster"> <img src="images/star_empty.png" width="15" height="18" alt="Poster"> <img src="images/star_empty.png" width="15" height="18" alt="Poster"> <img src="images/star_empty.png" width="15" height="18" alt="Poster"></li>
-          <li>Python &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="images/star_full.png" width="15" height="18" alt="Poster"> <img src="images/star_full.png" width="15" height="18" alt="Poster"> <img src="images/star_full.png" width="15" height="18" alt="Poster"> <img src="images/star_full.png" width="15" height="18" alt="Poster"> <img src="images/star_full.png" width="15" height="18" alt="Poster">  <img src="images/star_empty.png" width="15" height="18" alt="Poster"> <img src="images/star_empty.png" width="15" height="18" alt="Poster"> <img src="images/star_empty.png" width="15" height="18" alt="Poster"> <img src="images/star_empty.png" width="15" height="18" alt="Poster"> <img src="images/star_empty.png" width="15" height="18" alt="Poster"></li>
+        <ul class="rating-list">
+          <li>C# <Rating of={8} outOf={10} /></li>
+          <li>C++ <Rating of={7} outOf={10} /></li>
+          <li>Java <Rating of={4} outOf={10} /></li>
+          <li>Python <Rating of={5} outOf={10} /></li>
         </ul>  
         <h4>Applications</h4>
-        <ul>
-          <li>Unity &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="images/star_full.png" width="15" height="18" alt="Poster"> <img src="images/star_full.png" width="15" height="18" alt="Poster"> <img src="images/star_full.png" width="15" height="18" alt="Poster"> <img src="images/star_full.png" width="15" height="18" alt="Poster"> <img src="images/star_full.png" width="15" height="18" alt="Poster">  <img src="images/star_full.png" width="15" height="18" alt="Poster"> <img src="images/star_full.png" width="15" height="18" alt="Poster"> <img src="images/star_full.png" width="15" height="18" alt="Poster"> <img src="images/star_empty.png" width="15" height="18" alt="Poster"> <img src="images/star_empty.png" width="15" height="18" alt="Poster"></li>
-          <li>Godot &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="images/star_full.png" width="15" height="18" alt="Poster"> <img src="images/star_full.png" width="15" height="18" alt="Poster"> <img src="images/star_full.png" width="15" height="18" alt="Poster"> <img src="images/star_full.png" width="15" height="18" alt="Poster"> <img src="images/star_empty.png" width="15" height="18" alt="Poster">  <img src="images/star_empty.png" width="15" height="18" alt="Poster"> <img src="images/star_empty.png" width="15" height="18" alt="Poster"> <img src="images/star_empty.png" width="15" height="18" alt="Poster"> <img src="images/star_empty.png" width="15" height="18" alt="Poster"> <img src="images/star_empty.png" width="15" height="18" alt="Poster"></li>
-          <li>Unreal Engine &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="images/star_full.png" width="15" height="18" alt="Poster"> <img src="images/star_full.png" width="15" height="18" alt="Poster"> <img src="images/star_empty.png" width="15" height="18" alt="Poster"> <img src="images/star_empty.png" width="15" height="18" alt="Poster"> <img src="images/star_empty.png" width="15" height="18" alt="Poster">  <img src="images/star_empty.png" width="15" height="18" alt="Poster"> <img src="images/star_empty.png" width="15" height="18" alt="Poster"> <img src="images/star_empty.png" width="15" height="18" alt="Poster"> <img src="images/star_empty.png" width="15" height="18" alt="Poster"> <img src="images/star_empty.png" width="15" height="18" alt="Poster"></li>
-          <li>Blender &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="images/star_full.png" width="15" height="18" alt="Poster"> <img src="images/star_full.png" width="15" height="18" alt="Poster"> <img src="images/star_full.png" width="15" height="18" alt="Poster"> <img src="images/star_full.png" width="15" height="18" alt="Poster"> <img src="images/star_full.png" width="15" height="18" alt="Poster">  <img src="images/star_full.png" width="15" height="18" alt="Poster"> <img src="images/star_empty.png" width="15" height="18" alt="Poster"> <img src="images/star_empty.png" width="15" height="18" alt="Poster"> <img src="images/star_empty.png" width="15" height="18" alt="Poster"> <img src="images/star_empty.png" width="15" height="18" alt="Poster"></li>
+        <ul class="rating-list">
+          <li>Unity <Rating of={8} outOf={10} /></li>
+          <li>Godot <Rating of={4} outOf={10} /></li>
+          <li>Unreal Engine <Rating of={2} outOf={10} /></li>
+          <li>Blender <Rating of={6} outOf={10} /></li>
         </ul>           
         <h4>Languages</h4>
         <ul>
@@ -59,5 +60,14 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     flex: 20%; /* Set the width of the sidebar */
     background-color: #f1f1f1; /* Grey background color */
     padding: 20px; /* Some padding */
+  }
+
+  .rating-list {
+    padding-right: 40px;
+    max-width: 444px;
+  }
+  .rating-list > li {
+    display: flex;
+    justify-content: space-between;
   }
 </style>

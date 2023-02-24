@@ -1,0 +1,29 @@
+---
+import { __astro_tag_component__ } from 'astro/dist/runtime/server';
+
+type Props = {
+  of: number,
+  outOf: number
+}
+const { of, outOf } = Astro.props
+const stars = Array(outOf).fill(false).map((_, i) => i < of)
+---
+
+<span>
+  {
+    stars.map((isFilled) => {
+      return isFilled
+        ? <img src="images/star_full.png" width="15" height="18" alt="Poster">
+        : <img src="images/star_empty.png" width="15" height="18" alt="Poster">
+    })
+  }
+</span>
+
+<style>
+  img {
+    margin-right: .3rem;
+  }
+  img:last-child() {
+    margin-right: 0;
+  }
+</style>
