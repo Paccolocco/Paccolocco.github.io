@@ -36,7 +36,7 @@ function example(environment, loader, texLoader){
     zepplin.position.set(2550, 200, 0);
 
     //loading mesh data and assigning material
-    loader.load('/walkabout/assets/models/Zepplin/zepplin.fbx', function( object ) {
+    loader.load('/walkabout/models/Zepplin/zepplin.fbx', function( object ) {
 
         object.traverse(function (child) {
             if( child instanceof THREE.Mesh ){

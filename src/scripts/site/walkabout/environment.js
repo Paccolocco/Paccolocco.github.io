@@ -80,7 +80,7 @@ function loadObjects(camera) {
     //FBX loader
     const loader = new FBXLoader();
     //tex loader
-    const texLoader = new THREE.TextureLoader().setPath('/walkabout/assets/textures/');
+    const texLoader = new THREE.TextureLoader().setPath('/walkabout/textures/');
 
     //#region Museum
     var museumPos = new THREE.Vector3(0, 0, 0);
@@ -91,7 +91,7 @@ function loadObjects(camera) {
     museum.position.set(museumPos.x, museumPos.y, museumPos.z);
     museum.scale.set(museumScale.x, museumScale.y, museumScale.z);
 
-    loader.load('/walkabout/assets/models/Museum/main.fbx', function( object ) {
+    loader.load('/walkabout/models/Museum/main.fbx', function( object ) {
 
         object.traverse(function (child) {
             if( child instanceof THREE.Mesh ){
@@ -113,7 +113,7 @@ function loadObjects(camera) {
     museumGlass.position.set(museumPos.x, museumPos.y, museumPos.z);
     museumGlass.scale.set(museumScale.x, museumScale.y, museumScale.z);
 
-    loader.load('/walkabout/assets/models/Museum/glass.fbx', function( object ) {
+    loader.load('/walkabout/models/Museum/glass.fbx', function( object ) {
 
         object.traverse(function (child) {
             if( child instanceof THREE.Mesh ){
@@ -138,7 +138,7 @@ function loadObjects(camera) {
     tree.position.set(museumPos.x, museumPos.y, museumPos.z);
     tree.scale.set(museumScale.x, museumScale.y, museumScale.z);
 
-    loader.load('/walkabout/assets/models/Museum/tree.fbx', function( object ) {
+    loader.load('/walkabout/models/Museum/tree.fbx', function( object ) {
 
         object.traverse(function (child) {
             if( child instanceof THREE.Mesh ){
@@ -162,7 +162,7 @@ function loadObjects(camera) {
     podests.position.set(museumPos.x, museumPos.y, museumPos.z);
     podests.scale.set(museumScale.x, museumScale.y, museumScale.z);
 
-    loader.load('/walkabout/assets/models/Museum/podests_new.fbx', function( object ) {
+    loader.load('/walkabout/models/Museum/podests_new.fbx', function( object ) {
 
         object.traverse(function (child) {
             if( child instanceof THREE.Mesh ){
@@ -192,7 +192,7 @@ function loadObjects(camera) {
     car.rotation.set(carRot.x, carRot.y, carRot.z);
     car.scale.set(1, 1, 1);
 
-    loader.load('/walkabout/assets/models/Car/car.fbx', function( object ) {
+    loader.load('/walkabout/models/Car/car.fbx', function( object ) {
 
         object.traverse(function (child) {
             if( child instanceof THREE.Mesh ){
@@ -222,7 +222,7 @@ function loadObjects(camera) {
     carGlass.scale.set(1, 1, 1);
 
     //loading mesh data and assigning material
-    loader.load('/walkabout/assets/models/Car/glass.fbx', function( object ) {
+    loader.load('/walkabout/models/Car/glass.fbx', function( object ) {
 
         object.traverse(function (child) {
             if( child instanceof THREE.Mesh ){
@@ -250,7 +250,7 @@ function loadObjects(camera) {
     computer.rotation.set(0, 90 , 0);
 
     //loading mesh data and assigning material
-    loader.load('/walkabout/assets/models/computer.fbx', function( object ) {
+    loader.load('/walkabout/models/computer.fbx', function( object ) {
 
         object.traverse(function (child) {
             if( child instanceof THREE.Mesh ){
@@ -282,7 +282,7 @@ function loadObjects(camera) {
     jar.rotation.set(jarRotation.x, jarRotation.y, jarRotation.z);
 
     //loading mesh data and assigning material
-    loader.load('/walkabout/assets/models/jar.fbx', function( object ) {
+    loader.load('/walkabout/models/jar.fbx', function( object ) {
 
         object.traverse(function (child) {
             if( child instanceof THREE.Mesh ){
@@ -308,7 +308,7 @@ function loadObjects(camera) {
     jarLiquid.scale.set(jarScale, jarScale, jarScale);
     jarLiquid.rotation.set(jarRotation.x, jarRotation.y, jarRotation.z);
 
-    loader.load('/walkabout/assets/models/jarLiquid.fbx', function( object ) {
+    loader.load('/walkabout/models/jarLiquid.fbx', function( object ) {
 
         object.traverse(function (child) {
             if( child instanceof THREE.Mesh ){
@@ -345,7 +345,7 @@ function loadObjects(camera) {
     lab.scale.set(labScale, labScale, labScale);
 
     //loading mesh data and assigning material
-    loader.load('/walkabout/assets/models/Lab2.fbx', function( object ) {
+    loader.load('/walkabout/models/Lab2.fbx', function( object ) {
 
         object.traverse(function (child) {
             if( child instanceof THREE.Mesh ){
@@ -370,7 +370,7 @@ function loadObjects(camera) {
     liquid.scale.set(labScale, labScale, labScale);
 
     //loading mesh data and assigning material
-    loader.load('/walkabout/assets/models/Liquid2.fbx', function( object ) {
+    loader.load('/walkabout/models/Liquid2.fbx', function( object ) {
 
         object.traverse(function (child) {
             if( child instanceof THREE.Mesh ){
@@ -394,7 +394,7 @@ function loadObjects(camera) {
     myObject.position.set(2550, 200, 0);
 
     //loading mesh data and assigning material
-    loader.load('/walkabout/assets/models/rocket.fbx', function( object ) {
+    loader.load('/walkabout/models/rocket.fbx', function( object ) {
 
         object.traverse(function (child) {
             if( child instanceof THREE.Mesh ){
@@ -449,7 +449,7 @@ function loadModelingGoal4and7(loader, texLoader){
     bodyScan.scale.set(1.2, 1.2, 1.2);
 
     //loading mesh data and assigning material
-    loader.load('/walkabout/assets/models/Scan/bodyScan.fbx', function ( object ) {
+    loader.load('/walkabout/models/Scan/bodyScan.fbx', function ( object ) {
 
         
         let scanMixer = new THREE.AnimationMixer(object);
@@ -606,7 +606,7 @@ function loadModelingGoal6(loader, texLoader){
     robot.scale.set(0.25, 0.25, 0.25);
 
     //loading mesh data and assigning material
-    loader.load('/walkabout/assets/models/Robot/robot.fbx', function( object ) {
+    loader.load('/walkabout/models/Robot/robot.fbx', function( object ) {
         object.mixer = new THREE.AnimationMixer( object );
         mixers_environment.push(object.mixer);
         robotClip = object.mixer.clipAction(object.animations[0]).play();
@@ -657,7 +657,7 @@ function loadModelingGoal9(camera, loader, texLoader){
     destruction.position.set(-1800, 64, 1800);
     destruction.scale.set(0.5, 0.5, 0.5);
       
-    loader.load('/walkabout/assets/models/Destructible/asteriod.fbx', function (object) {
+    loader.load('/walkabout/models/Destructible/asteriod.fbx', function (object) {
 
         object.traverse(function (child) {
  
@@ -709,7 +709,7 @@ function updateControls(controls)
 }
 
 //Audio
-const audioLoader = new THREE.AudioLoader().setPath('/walkabout/assets/sounds/');
+const audioLoader = new THREE.AudioLoader().setPath('/walkabout/sounds/');
 const audioListener = new THREE.AudioListener();
 const backgroundMusic = new THREE.Audio(audioListener);
 const soundOfDestruction = new THREE.PositionalAudio(audioListener);      
@@ -746,7 +746,7 @@ function loadModelingGoal10(loader, texLoader){
     var brain_LOD0 = new THREE.Object3D();
         brain_LOD0.name = 'brain_LOD0';
 
-    loader.load('/walkabout/assets/models/Brain/brain_high.fbx', function(obj)
+    loader.load('/walkabout/models/Brain/brain_high.fbx', function(obj)
     {
         obj.traverse(function (child) {
             if( child instanceof THREE.Mesh ){
@@ -766,7 +766,7 @@ function loadModelingGoal10(loader, texLoader){
         brain_LOD1.name = 'brain_LOD1';
         //brain_LOD1.scale.set(1.2, 1.2, 1.2)
 
-    loader.load('/walkabout/assets/models/Brain/brain_low2.fbx', function(obj)
+    loader.load('/walkabout/models/Brain/brain_low2.fbx', function(obj)
     {
         obj.traverse(function (child) {
             if( child instanceof THREE.Mesh ){
@@ -785,7 +785,7 @@ function loadModelingGoal10(loader, texLoader){
     var brain_LOD2 = new THREE.Object3D();
     brain_LOD2.name = 'brain_LOD2';
 
-    loader.load('/walkabout/assets/models/Brain/brain_low3.fbx', function(obj)
+    loader.load('/walkabout/models/Brain/brain_low3.fbx', function(obj)
     {
         obj.traverse(function (child) {
             if( child instanceof THREE.Mesh ){

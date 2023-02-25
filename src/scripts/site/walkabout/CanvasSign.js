@@ -25,7 +25,7 @@ import * as CanvasSign from './CanvasSign.js';
 const loader = new FBXLoader();
 const titleFontSize = 60;
 const textFontSize = 40;
-const signTexLoader = new THREE.TextureLoader().setPath('/walkabout/assets/textures/signs/');
+const signTexLoader = new THREE.TextureLoader().setPath('/walkabout/textures/signs/');
 
 
 function create(environment = null, title = "Exhibit Title", text = "Description of usage.", modelname = 'defaultSign', font = "Arial"){
@@ -105,7 +105,7 @@ this.loadSign = function(position = new THREE.Vector3(0,0,0), rotation = new THR
    });
 
    //loading mesh data and assigning material
-   loader.load( '/walkabout/assets/models/signs/'+this.modelname+'.fbx', function ( object ) {
+   loader.load( '/walkabout/models/signs/'+this.modelname+'.fbx', function ( object ) {
 
        object.traverse( function ( child ) {
        if ( child.isMesh ) {

@@ -46,7 +46,7 @@ playerLight.shadow.camera.right = 75;
 playerLight.target = player;
 player.add( playerLight );
 
-loader.load( '/walkabout/assets/models/Player.fbx' , function ( object ) {
+loader.load( '/walkabout/models/Player.fbx' , function ( object ) {
 
    miwer_player = new THREE.AnimationMixer( object );
    
