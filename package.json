@@ -10,8 +10,10 @@
 		"astro": "astro"
 	},
 	"dependencies": {
+		"@astrojs/image": "^0.15.0",
 		"astro": "^2.0.13",
 		"autoprefixer": "^10.4.13",
-		"cssnano": "^5.1.15"
+		"cssnano": "^5.1.15",
+		"sharp": "^0.31.3"
 	}
 }
