@@ -1,10 +1,10 @@
 ---
-import "../../css/contentCommon.css";
-import GamesSidebar from "../../components/GamesSidebar.astro";
-import BaseLayout from "../../layouts/BaseLayout.astro";
+import "@css/contentCommon.css";
+import GamesSidebar from "@components/GamesSidebar.astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
 import { Image } from "@astrojs/image/components";
 
-import { littleLightEnginePoster, littleLightEngine_background, littleLightEngine_depthmap, littleLightEngine_hitbox, littleLightEngine_noHitbox } from "src/scripts/build/imageImports";
+import { littleLightEnginePoster, littleLightEngine_background, littleLightEngine_depthmap, littleLightEngine_hitbox, littleLightEngine_noHitbox } from "@scripts/build/imageImports";
 
 export const header = "Little Light Engine"
 export const priority = 10
