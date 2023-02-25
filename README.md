@@ -6,6 +6,8 @@ Install dependencies with `npm install`, then run a local dev server with `npm r
 The dev server might output warnings, so look for them.
 Stopping the server can be done with `Ctrl + C`.
 
+Files beginning with _ are currently unused.
+
 ## Building
 Building is necessary locally. GitHub handles the build and deploy of the website automatically.
 

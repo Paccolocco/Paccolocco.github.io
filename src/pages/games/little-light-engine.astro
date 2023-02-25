@@ -2,6 +2,9 @@
 import "../../css/contentCommon.css";
 import GamesSidebar from "../../components/GamesSidebar.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import { Image } from "@astrojs/image/components";
+
+import { littleLightEnginePoster, littleLightEngine_background, littleLightEngine_depthmap, littleLightEngine_hitbox, littleLightEngine_noHitbox } from "src/scripts/build/imageImports";
 
 export const header = "Little Light Engine"
 export const priority = 10
@@ -15,7 +18,7 @@ export const priority = 10
         <iframe width="1600" height="900" src="https://www.youtube-nocookie.com/embed/7kJk3F8UFis" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>  
       <div class="row">
-        <img src="/games/littleLightEngine/gl-poster.png" width="350" height="496" alt="Poster">
+        <Image src={littleLightEnginePoster} width={350} height={496} alt="Poster for Little Light Engine" />
         <div>
           <p>
             The Little Light Engine is a C++ program developed side by side with a small narrative game in which the player plays a vampire trying to avoid lights. The goal of the project was to develop a game independently of established game engines such as Unreal Engine and Unity and to then build an engine around the code basis, allowing for the creation of more games. In the end, Little Light Engine provides functionalities that allow the user to quickly develop 3d games incorporating directional, spot, and point lights with real-time shadows, as well as other functionalities important for creating games.
@@ -24,12 +27,12 @@ export const priority = 10
           <p>Using: C++, OpenGL</p>
         </div>
         <div>
-          <img src="/games/littleLightEngine/nohitbox.png" width="800" height="500" alt="no hitbox">
-          <img src="/games/littleLightEngine/hitbox.png" width="800" height="500" alt="hitbox">
+          <Image src={littleLightEngine_noHitbox} width={800} height={500} alt="A birds-eye view of the map of Little Light Engine" />
+          <Image src={littleLightEngine_hitbox} width={800} height={500} alt="A birds-eye view of the map of Little Light Engine with visualized hitboxes" />
         </div>
         <div>
-          <img src="/games/littleLightEngine/Depthmap.PNG" width="800" height="500" alt="Dephtmap">
-          <img src="/games/littleLightEngine/Background.PNG" width="800" height="500" alt="Background">
+          <Image src={littleLightEngine_depthmap} width={800} height={500} alt="A depthmap of the Little Light Engine" />
+          <Image src={littleLightEngine_background} width={800} height={500} alt="The main character of the Little Light Engine with the end-palace in the background" />
         </div>
       </div>
     </div>

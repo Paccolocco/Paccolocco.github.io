@@ -2,6 +2,9 @@
 import "../../css/contentCommon.css";
 import GamesSidebar from "../../components/GamesSidebar.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import { Image } from "@astrojs/image/components";
+
+import { danceBattlePoster } from "../../scripts/build/imageImports"
 
 export const header = "Dance Battle"
 ---
@@ -14,7 +17,7 @@ export const header = "Dance Battle"
         <iframe width="1600" height="900" src="https://www.youtube-nocookie.com/embed/VXSMHxbKRnQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>  
       <div class="row">
-        <img src="/games/danceBattle/dancebattleposter.jpg" width="350" height="496" alt="Poster">
+        <Image src={danceBattlePoster} width={350} height={496} alt="Poster for Dance Battle" />
         <div>
           <p>
             "Dance Battle - Dance your way to the top" is a 2D RPG where you dance to defeat your enemies.

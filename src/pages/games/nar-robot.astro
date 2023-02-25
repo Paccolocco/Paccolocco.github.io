@@ -2,6 +2,9 @@
 import "../../css/contentCommon.css";
 import GamesSidebar from "../../components/GamesSidebar.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import { Image } from "@astrojs/image/components";
+
+import { narRobotPoster } from "../../scripts/build/imageImports"
 
 export const header = "NarRobot"
 export const priority = 10
@@ -15,7 +18,7 @@ export const priority = 10
         <iframe width="1600" height="900" src="https://www.youtube-nocookie.com/embed/8052I2AmcBk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>  
       <div class="row">
-        <img src="/games/narRobot/NarRobot.png" width="350" height="496" alt="Poster">
+        <Image src={narRobotPoster} width={350} height={496} alt="Poster for NarRobot" />
         <div>
           <p>
             NarRobot is a Unity plugin that connects the engine to the social robot Reeti. It aims for a simple installation and ease-of-use. NarRobot mirrors all of Reeti's vital functions for easy remote control and additionally provides higher-level commands to further improve the workflow with Reeti.    
