@@ -31,7 +31,7 @@ function gamePageComparator(
 }
 
 async function globAstroInstances(): Promise<AstroInstance[]> {
-  const globResult = import.meta.glob<AstroInstance>("../pages/games/*.astro")
+  const globResult = import.meta.glob<AstroInstance>("/src/pages/games/*.astro")
 
   const paths = Object.keys(globResult)
   const importPromises = await Promise.allSettled(paths.map((path) => {
