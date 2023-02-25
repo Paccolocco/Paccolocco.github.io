@@ -1,6 +1,6 @@
 import {OrbitControls} from 'https://unpkg.com/three@0.127.0/examples/jsm/controls/OrbitControls.js'
 import * as THREE from 'https://unpkg.com/three@0.127.0/build/three.module.js';
-import {Boid} from "./walkabout/src/boid.js";
+import {Boid} from "../walkabout/boid.js";
 const canvas = document.getElementById("threeCanvas")
 import * as Input from './input.js';
 
