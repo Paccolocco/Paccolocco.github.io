@@ -41,3 +41,8 @@ The correct approach would be to use css modules (*.module.css) for reusable/mut
   width:100%;
   vertical-align:top;
 }
+
+.flex-leftover {
+  flex-basis: min-content;
+  flex-grow: 1;
+}
