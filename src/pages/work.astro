@@ -1,13 +1,16 @@
 ---
 import "@css/contentCommon.css";
 import BaseLayout from "@layouts/BaseLayout.astro";
+import { Image } from "@astrojs/image/components";
+
+import { idleLemonadeTycoonAd } from "@scripts/build/imageImports";
 ---
 
 <BaseLayout title="Lenny Siol" header="Internship">
   <div class="row">
     <div class="main">
       <h1>Playconda Internship</h1>
-      <img src="internship/e40bce08-6215-4aeb-b84f-f716d62e5bde_rw_1920.jpg"  alt="Poster">
+      <Image src={idleLemonadeTycoonAd} alt="Ad for the mobile game Idle Lemonade Tycoon" />
       <a href="https://playconda.com/" target="_blank">Website</a>
       <p>
           From the beginning of April 2021 to the end of July 2021 I interned at playconda GmbH developing new features for their mobile game "Idle Lemonade Tycoon".

@@ -15,3 +15,4 @@ export { default as starEmpty } from "@images/star_empty.png"
 
 // Miscellaneous
 export { default as pictureOfMe } from "@images/pictureOfMe.jpeg"
+export { default as idleLemonadeTycoonAd } from "@images/idleLemonadeTycoonAd.jpg"
