@@ -1,5 +1,7 @@
 ---
-import { __astro_tag_component__ } from 'astro/dist/runtime/server';
+import { Image } from '@astrojs/image/components';
+
+import { starEmpty, starFull } from '@scripts/build/imageImports';
 
 type Props = {
   of: number,
@@ -13,8 +15,8 @@ const stars = Array(outOf).fill(false).map((_, i) => i < of)
   {
     stars.map((isFilled) => {
       return isFilled
-        ? <img src="images/star_full.png" width="15" height="18" alt="Poster">
-        : <img src="images/star_empty.png" width="15" height="18" alt="Poster">
+        ? <Image src={starFull} width={15} height={18} alt="Filled star" />
+        : <Image src={starEmpty} width={15} height={18} alt="Empty star" />
     })
   }
 </span>

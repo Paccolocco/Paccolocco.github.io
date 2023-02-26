@@ -2,6 +2,9 @@
 import "@css/contentCommon.css";
 import BaseLayout from "@layouts/BaseLayout.astro";
 import Rating from "@components/Rating.astro";
+import { Image } from "@astrojs/image/components";
+
+import { pictureOfMe } from "@scripts/build/imageImports";
 ---
 
 <script src="@scripts/site/boids/boidApp.js" />
@@ -9,7 +12,7 @@ import Rating from "@components/Rating.astro";
 <BaseLayout title="Lenny Siol Portfolio" header="Lenny Siol" subHeader="Games Engineer">
   <div class="row">
     <div class="side">
-      <img src="images/pictureOfMe.jpeg"  alt="Poster">
+      <Image src={pictureOfMe} width={414} alt="Picture of Lenny Siol" />
       <p> 
         Hi I'm Lenny! I'm an Games Engineering student at the Julius-Maximilians-University of Würzburg.
         I'm about to finish my Games Engineering bachelor and start my masters in Computer Science.
