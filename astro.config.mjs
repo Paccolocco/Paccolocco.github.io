@@ -3,6 +3,7 @@ import image from "@astrojs/image";
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://lennysiol.com/',
   integrations: [image({
     serviceEntryPoint: "@astrojs/image/sharp"
   })]
