@@ -1,0 +1,19 @@
+---
+import "@css/contentCommon.css";
+import GamesSidebar from "@components/GamesSidebar.astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import { Image } from "@astrojs/image/components"
+
+import { littleLightEnginePoster, narRobotPoster, danceBattlePoster } from "@scripts/build/imageImports";
+---
+
+<BaseLayout title="Lenny Siol" header="Games" subHeader="And Game Related Software">
+  <div class="row">
+    <GamesSidebar />
+    <div class="main">
+      <Image src={littleLightEnginePoster} width={525} height={750} alt="Poster for Little Light Engine" />
+      <Image src={narRobotPoster} width={525} height={750} alt="Poster for NarRobot" />
+      <Image src={danceBattlePoster} width={525} height={750} alt="Poster for Dance Battle" />
+    </div>
+  </div>
+</BaseLayout>

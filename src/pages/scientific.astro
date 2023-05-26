@@ -1,0 +1,67 @@
+---
+import { Image } from "@astrojs/image/components";
+import "@css/contentCommon.css";
+import BaseLayout from "@layouts/BaseLayout.astro";
+
+import { pepper, pepperTalking, pepperTurningHead, pepperWithMe, thesis1, thesis2, thesis3, thesis4, thesis5, thesis6, thesis7, thesis8, thesis9, thesis10, thesis11, thesis12, thesis13, thesis14, thesis15, thesis16, thesis17, thesis18, thesis19, thesis20, thesis21, thesis22, thesis23, thesis24, thesis25 } from "@scripts/build/imageImports";
+---
+
+<BaseLayout title="Lenny Siol" header="Lenny Siol" subHeader="Games Engineer">
+  <div class="row">
+    <div class="main">
+      <h2>Julius-Maximilians-Universität Würzburg</h2>
+      <p>
+        As part of my work at the University of Würzburg I'm working on PePUT, 
+        the Pepper-Python-Unity Toolkit. PePUT is an application that allows the user
+        to easily connect any amount of Pepper robots to a Unity application. Pepper can then
+        be controlled and tracked over Unity, allowing the user to integrate Pepper into games 
+        and other interactive applications. PePUT is currently still in development but due to 
+        release soon, allowing other universities to conduct research with Pepper more easily.
+      </p>
+
+      <div class="row">
+        <Image src={pepper} width={750} height={1000} alt="The robot Pepper" />
+        <Image src={pepperWithMe} width={750} height={1000} alt="Me in front of the robot Pepper" />
+        <div>
+          <video width="640" height="480" controls>
+            <source src={pepperTalking} type="video/ogg">
+          </video>
+          <video width="640" height="480" controls>
+            <source src={pepperTurningHead} type="video/ogg">
+          </video>
+        </div>
+      </div>
+      <h2>Bachelor Thesis</h2>
+      <p>
+        For my bachelor thesis I'm using marching cubes to create organically growing towers. 
+        These towers are then integrated into an already exisitng tower defense game. The thesis 
+        isn't finished yet but will be by the end of March.
+      </p>
+      <Image src={thesis1} alt="Showcase of the basic marching cube implementation" />
+      <Image src={thesis2} alt="Showcase of the basic marching cube implementation" />
+      <Image src={thesis3} alt="Showcase of the basic marching cube implementation" />
+      <Image src={thesis4} alt="Showcase of the basic marching cube implementation" />
+      <Image src={thesis5} alt="Showcase of the basic marching cube implementation" />
+      <Image src={thesis6} alt="Showcase of the basic marching cube implementation" />
+      <Image src={thesis7} alt="Showcase of the basic marching cube implementation" />
+      <Image src={thesis8} alt="Showcase of the basic marching cube implementation" />
+      <Image src={thesis9} alt="Showcase of the marching cube implementation with weights" />
+      <Image src={thesis10} alt="Showcase of the marching cube implementation with weights" />
+      <Image src={thesis11} alt="Showcase of the marching cube implementation with weights" />
+      <Image src={thesis12} alt="Showcase of an agent creating geometry by randomly adding to the weights" />
+      <Image src={thesis13} alt="Showcase of an agent creating geometry by randomly adding to the weights" />
+      <Image src={thesis14} alt="Showcase of an agent creating geometry by randomly adding to the weights" />
+      <Image src={thesis15} alt="Showcase of an agent creating geometry by randomly adding to the weights" />
+      <Image src={thesis16} alt="Showcase of an agent creating geometry by randomly adding to the weights" />
+      <Image src={thesis17} alt="Showcase of an agent creating geometry by randomly adding to the weights" />
+      <Image src={thesis18} alt="Showcase of an agent creating geometry by randomly adding to the weights" />
+      <Image src={thesis19} alt="Showcase of an agent creating geometry by randomly adding to the weights" />
+      <Image src={thesis20} alt="Showcase of the added geometry having another color" />
+      <Image src={thesis21} alt="Showcase of the added geometry having red and blue color and spawning respective turrets" />
+      <Image src={thesis22} alt="Showcase of the added geometry having red and blue color and spawning respective turrets" />
+      <Image src={thesis23} alt="Showcase of the added geometry having red and blue color and spawning respective turrets" />
+      <Image src={thesis24} alt="Showcase of two types of geometry with turrets being added randomly by two agents" />
+      <Image src={thesis25} alt="Showcase of the shooting of the red turrets" />
+    </div>
+  </div>
+</BaseLayout>

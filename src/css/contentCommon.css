@@ -1,0 +1,48 @@
+/*
+Temporary css file. Do not use this pattern, as it leaks css definitions to other components.
+The correct approach would be to use css modules (*.module.css) for reusable/mutual css.
+*/
+
+/* Column container */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 20px;
+}
+
+.row img{
+  padding-top: 5px;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {
+      flex-direction: column;
+  }
+}
+
+/* Main column */
+.main {
+  flex: 70%; /* Set the width of the main content */
+  background-color: white; /* White background color */
+  padding: 20px; /* Some padding */
+}
+
+.main p {
+  text-align:left;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: optima, sans-serif;
+  font-size: 16px;
+}
+.main p:after {/* this adds an extra invisible line, so any other line is justified */
+  content:'';
+  display:inline-block;
+  width:100%;
+  vertical-align:top;
+}
+
+.flex-leftover {
+  flex-basis: min-content;
+  flex-grow: 1;
+}

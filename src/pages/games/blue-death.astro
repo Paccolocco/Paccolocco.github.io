@@ -1,0 +1,23 @@
+---
+import "@css/contentCommon.css";
+import GamesSidebar from "@components/GamesSidebar.astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
+
+export const header = "Blue Death Wet-Temption"
+---
+
+<BaseLayout title="Lenny Siol" header={header} subHeader="A Game Created For Franken Game Jam 2021">
+  <div class="row">
+    <GamesSidebar />
+    <div class="main">
+      <div class="row">
+        <iframe width="1600" height="900" src="https://www.youtube-nocookie.com/embed/7nDzRtIBKVI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>  
+      <div class="row">
+        <p>
+          Blue Death Wet-Temption was developed for the Franken Game Jam 2021. 
+        </p>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

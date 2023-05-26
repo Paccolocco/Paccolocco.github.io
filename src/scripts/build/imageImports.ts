@@ -1,0 +1,72 @@
+// Game posters
+export { default as littleLightEnginePoster } from "@media/games/littleLightEngine/gl-poster.png"
+export { default as narRobotPoster } from "@media/games/narRobot/NarRobot.png"
+export { default as danceBattlePoster } from "@media/games/danceBattle/dancebattleposter.jpg"
+
+// Little Light Engine
+export { default as littleLightEngine_noHitbox } from "@media/games/littleLightEngine/nohitbox.png"
+export { default as littleLightEngine_hitbox } from "@media/games/littleLightEngine/hitbox.png"
+export { default as littleLightEngine_depthmap } from "@media/games/littleLightEngine/depthmap.png"
+export { default as littleLightEngine_background } from "@media/games/littleLightEngine/background.png"
+
+// Icons
+export { default as starFull } from "@media/star_full.png"
+export { default as starEmpty } from "@media/star_empty.png"
+
+// Miscellaneous
+export { default as pictureOfMe } from "@media/pictureOfMe.jpeg"
+export { default as idleLemonadeTycoonAd } from "@media/idleLemonadeTycoonAd.jpg"
+
+// Renders
+export { default as render_hills3 } from "@media/renders/hills3.png"
+export { default as render_anotherGrass } from "@media/renders/anotherGrass.png"
+export { default as render_geo } from "@media/renders/geo.png"
+export { default as render_meltingSun } from "@media/renders/meltingSun.png"
+export { default as render_ballThing } from "@media/renders/ballThing.png"
+export { default as render_horns4 } from "@media/renders/horns4.png"
+export { default as render_spaceBall } from "@media/renders/spaceBall.png"
+export { default as render_swordInTheWoods7 } from "@media/renders/swordInTheWoods7.png"
+export { default as render_mountain } from "@media/renders/mountain.jpg"
+export { default as render_gpu7 } from "@media/renders/computerBuilding/GPU_7.jpg"
+export { default as render_gtx2 } from "@media/renders/computerBuilding/GTX_2.png"
+export { default as render_cooler } from "@media/renders/computerBuilding/Cooler.png"
+export { default as render_family2 } from "@media/renders/computerBuilding/Family_2.png"
+export { default as render_cuteRoom } from "@media/renders/computerBuilding/Cute_Room.png"
+export { default as render_donut2 } from "@media/renders/donut2.png"
+export { default as render_factory } from "@media/renders/factory.png"
+export { default as render_factory2 } from "@media/renders/factory2.png"
+export { default as render_cheesepot } from "@media/renders/cheesepot.png"
+export { default as render_eyebowl } from "@media/renders/eyebowl.png"
+
+// Pepper
+export { default as pepper } from "@media/scientific/pepper.jpeg"
+export { default as pepperWithMe } from "@media/scientific/pepperWithMe.jpeg"
+export { default as pepperTalking } from "@media/scientific/pepperTalking.mp4"
+export { default as pepperTurningHead } from "@media/scientific/pepperTurningHead.mp4"
+
+// Bachelor thesis
+export { default as thesis1 } from "@media/scientific/thesis1.png"
+export { default as thesis2 } from "@media/scientific/thesis2.png"
+export { default as thesis3 } from "@media/scientific/thesis3.png"
+export { default as thesis4 } from "@media/scientific/thesis4.png"
+export { default as thesis5 } from "@media/scientific/thesis5.png"
+export { default as thesis6 } from "@media/scientific/thesis6.png"
+export { default as thesis7 } from "@media/scientific/thesis7.png"
+export { default as thesis8 } from "@media/scientific/thesis8.png"
+export { default as thesis9 } from "@media/scientific/thesis9.png"
+export { default as thesis10 } from "@media/scientific/thesis10.png"
+export { default as thesis11 } from "@media/scientific/thesis11.png"
+export { default as thesis12 } from "@media/scientific/thesis12.png"
+export { default as thesis13 } from "@media/scientific/thesis13.png"
+export { default as thesis14 } from "@media/scientific/thesis14.png"
+export { default as thesis15 } from "@media/scientific/thesis15.png"
+export { default as thesis16 } from "@media/scientific/thesis16.png"
+export { default as thesis17 } from "@media/scientific/thesis17.png"
+export { default as thesis18 } from "@media/scientific/thesis18.png"
+export { default as thesis19 } from "@media/scientific/thesis19.png"
+export { default as thesis20 } from "@media/scientific/thesis20.png"
+export { default as thesis21 } from "@media/scientific/thesis21.png"
+export { default as thesis22 } from "@media/scientific/thesis22.png"
+export { default as thesis23 } from "@media/scientific/thesis23.png"
+export { default as thesis24 } from "@media/scientific/thesis24.png"
+export { default as thesis25 } from "@media/scientific/thesis25.png"

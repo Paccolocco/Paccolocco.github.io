@@ -1,0 +1,99 @@
+---
+import "../css/global.css"
+type Props = {
+  title: string,
+  header: string,
+  subHeader?: string
+}
+const { title, header, subHeader = "" } = Astro.props
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{title}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <div class="header">
+      <h1>{header}</h1>
+      <p>{subHeader}</p>
+    </div>
+    <div class="navbar">
+      <a href="/">Home</a>
+      <a href="/games">Games</a>
+      <a href="/scientific">Scientific Work</a>
+      <a href="/3d-model">3D Modeling</a>
+      <a href="/work">Work Experience</a>
+      <a href="/walkabout">ThreeJs Walkabout</a>
+      <a href="/contact" class="right">Contact</a>
+    </div>
+    <slot />
+    <div class="footer">
+      <slot name="footer" />
+    </div>
+  </body>
+</html>
+
+<style>
+  body {
+    font-family: optima, sans-serif;
+    margin: 0;
+  }
+
+  /* header style */
+  .header {
+    padding: 20px;
+    text-align: center;
+    background: #bc3a1a;
+    color: white;
+  }
+  .header h1 {
+    font-size: 40px;
+  }
+  .header p {
+    text-align: center;
+  }
+
+  /* Style the top navigation bar */
+  .navbar {
+    overflow: hidden; /* Hide overflow */
+    background-color: #333; /* Dark background color */
+  }
+
+  /* Style the navigation bar links */
+  .navbar a {
+    float: left; /* Make sure that the links stay side-by-side */
+    display: block; /* Change the display to block, for responsive reasons (see below) */
+    color: white; /* White text color */
+    text-align: center; /* Center the text */
+    padding: 14px 20px; /* Add some padding */
+    text-decoration: none; /* Remove underline */
+  }
+
+  /* Right-aligned link */
+  .navbar a.right {
+    float: right; /* Float a link to the right */
+  }
+
+  /* Change color on hover/mouse-over */
+  .navbar a:hover {
+    background-color: #ddd; /* Grey background color */
+    color: black; /* Black text color */
+  }
+
+  /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+  @media screen and (max-width: 400px) {
+    .navbar a {
+      float: none;
+      width: 100%;
+    }
+  }
+
+  .footer {
+    padding: 20px; /* Some padding */
+    text-align: center; /* Center text*/
+    background: #ddd; /* Grey background */
+  }
+</style>

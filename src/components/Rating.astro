@@ -1,0 +1,31 @@
+---
+import { Image } from '@astrojs/image/components';
+
+import { starEmpty, starFull } from '@scripts/build/imageImports';
+
+type Props = {
+  of: number,
+  outOf: number
+}
+const { of, outOf } = Astro.props
+const stars = Array(outOf).fill(false).map((_, i) => i < of)
+---
+
+<span>
+  {
+    stars.map((isFilled) => {
+      return isFilled
+        ? <Image src={starFull} width={15} height={18} alt="Filled star" />
+        : <Image src={starEmpty} width={15} height={18} alt="Empty star" />
+    })
+  }
+</span>
+
+<style>
+  img {
+    margin-right: .3rem;
+  }
+  img:last-child() {
+    margin-right: 0;
+  }
+</style>
