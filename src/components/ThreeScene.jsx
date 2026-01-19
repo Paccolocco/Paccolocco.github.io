@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
+// Update these imports to use the copied files
 import { GLTFLoader } from "/lib/GLTFLoader";
 import { OrbitControls } from "/lib/OrbitControls";
 
@@ -24,7 +25,6 @@ export default function ThreeScene({bgColor = "000000", ambientLightColor = "0xf
     rendererRef.current = renderer;
 
     // Lighting
-
     scene.add(new THREE.AmbientLight(new THREE.Color().setHex(ambientLightColor), 0.8));
     const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
     directionalLight.position.set(5, 10, 7.5);
@@ -34,8 +34,7 @@ export default function ThreeScene({bgColor = "000000", ambientLightColor = "0xf
     controls.enableDamping = true;
 
     // Scene Background
-    console.log("0x")
-    scene.background = new THREE.Color().setHex("0x" + bgColor);
+    scene.background = new THREE.Color().setHex(`0x${bgColor}`);
 
     // Load model
     const loader = new GLTFLoader();
@@ -75,5 +74,5 @@ export default function ThreeScene({bgColor = "000000", ambientLightColor = "0xf
     };
   }, []);
 
-  return <div ref={mountRef} style={{ width: "100%", height: "400px", borderRadius: '10px', overflow: 'hidden'}} />; //relative py-4 sm:px-6 rounded-lg flex-
+  return <div ref={mountRef} style={{ width: "100%", height: "400px", borderRadius: '10px', overflow: 'hidden'}} />;
 }
