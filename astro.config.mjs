@@ -21,7 +21,11 @@ export default defineConfig({
         targets: [
           {
             src: 'node_modules/three/examples/jsm/loaders/GLTFLoader.js',
-            dest: 'lib'
+            dest: 'public/lib'
+          },
+          {
+            src: 'node_modules/three/examples/jsm/controls/OrbitControls.js',
+            dest: 'public/lib'
           }
         ]
       })
