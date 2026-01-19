@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+import { GLTFLoader } from "/lib/GLTFLoader";
+import { OrbitControls } from "/lib/OrbitControls";
 
 export default function ThreeScene({bgColor = "000000", ambientLightColor = "0xffffff", modelName = ""}) {
   const mountRef = useRef(null);
