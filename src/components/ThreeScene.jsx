@@ -1,8 +1,5 @@
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
-// Update these imports to use the copied files
-import { GLTFLoader } from "/lib/GLTFLoader";
-import { OrbitControls } from "/lib/OrbitControls";
 
 export default function ThreeScene({bgColor = "000000", ambientLightColor = "0xffffff", modelName = ""}) {
   const mountRef = useRef(null);
@@ -30,22 +27,27 @@ export default function ThreeScene({bgColor = "000000", ambientLightColor = "0xf
     directionalLight.position.set(5, 10, 7.5);
     scene.add(directionalLight);
 
-    const controls = new OrbitControls(camera, renderer.domElement);
-    controls.enableDamping = true;
+    // Dynamically import GLTFLoader and OrbitControls
+    Promise.all([
+      import('three/examples/jsm/loaders/GLTFLoader.js'),
+      import('three/examples/jsm/controls/OrbitControls.js')
+    ]).then(([{ GLTFLoader }, { OrbitControls }]) => {
+      const controls = new OrbitControls(camera, renderer.domElement);
+      controls.enableDamping = true;
+
+      const loader = new GLTFLoader();
+      loader.load(
+        modelName,
+        (gltf) => {
+          scene.add(gltf.scene);
+        },
+        undefined,
+        (error) => console.error("Error loading model:", error)
+      );
+    });
 
     // Scene Background
     scene.background = new THREE.Color().setHex(`0x${bgColor}`);
-
-    // Load model
-    const loader = new GLTFLoader();
-    loader.load(
-      modelName,
-      (gltf) => {
-        scene.add(gltf.scene);
-      },
-      undefined,
-      (error) => console.error("Error loading model:", error)
-    );
 
     const resizeObserver = new ResizeObserver(() => {
       const width = container.offsetWidth;
@@ -60,7 +62,9 @@ export default function ThreeScene({bgColor = "000000", ambientLightColor = "0xf
 
     const animate = () => {
       requestAnimationFrame(animate);
-      controls.update();
+      if (window.OrbitControls) {
+        controls.update();
+      }
       renderer.render(scene, camera);
     };
     animate();
