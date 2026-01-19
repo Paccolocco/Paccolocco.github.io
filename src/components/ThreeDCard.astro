@@ -1,0 +1,19 @@
+---
+import ThreeScene from './ThreeScene.jsx';
+
+export interface CardProps {
+    modelName: string;
+    animate: string;
+    colSpan?: string;
+    rowSpan?: string;
+    bgColor?:string;
+    bgColorHex?:string;
+    aLightColor?:string;
+  }
+  const { modelName, colSpan = 'w-full', rowSpan = 'h-full', animate, bgColor="ppink", bgColorHex="000000", aLightColor="0x000000" } = Astro.props;
+---
+<div class={`overflow-hidden shadow-xl ${bgColor} rounded-3xl p-2 ${colSpan} ${rowSpan} ${animate} `}>
+    <div class="w-full h-full">
+      <ThreeScene bgColor={bgColorHex} ambientLightColor={aLightColor} client:load />
+    </div>
+</div>

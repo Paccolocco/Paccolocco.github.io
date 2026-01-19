@@ -1,77 +1,58 @@
 ---
-import "@css/contentCommon.css";
-import BaseLayout from "@layouts/BaseLayout.astro";
-import Rating from "@components/Rating.astro";
-import { Image } from "@astrojs/image/components";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { Image } from "astro:assets";
+import heroImageDark from "../images/option2.jpg";
+import heroImageLight from "../images/option2.jpg";
+import FeaturedArticles from "../components/articles/FeaturedArticles.astro";
+import Projects from "../components/Projects.astro";
+import NewsletterForm from "../components/NewsletterForm.astro";
+import ThreeScene from "../components/ThreeScene.jsx";
 
-import { pictureOfMe } from "@scripts/build/imageImports";
+import "../contentCommon.css";
 ---
 
-<script src="@scripts/site/boids/boidApp.js" />
+<script src="../../src/scripts/boids/boidApp.js" />
 
-<BaseLayout title="Lenny Siol Portfolio" header="Lenny Siol" subHeader="Games Engineer">
-  <div class="row">
-    <div class="side">
-      <Image src={pictureOfMe} width={414} alt="Picture of Lenny Siol" />
-      <p> 
-        Hi I'm Lenny! I'm a computer science master's student at the Julius-Maximilians-University of Würzburg.
+<BaseLayout>
+	<!-- Hero section -->
+	<div class="mx-auto lg:max-w-4xl mt-40 mb-20">
+		<div class="flex flex-col lg:flex-row lg:items-center lg:space-x-16">
+			<div>
+				<h1
+					class="text-3xl sm:text-5xl font-bold tracking-tight text-balance"
+				>
+					Games & Robots
+				</h1>
+				<div class="mt-8 leading-8">
+					<p>
+						Hi I'm Lenny, a computer science masters graduate (almost) with an interest in games and robotics.   
+					</p>
+				</div>
+			</div>
 
-        <p><a href="https://drive.google.com/file/d/1ACmAp2LqMuuWCoAUftFoTEXs-hI2XHN0/view?usp=sharing" target="_blank">CV</a></p>
+			<div class="order-first lg:order-last flex-shrink-0 mb-8">
 
-        I like to play and develop games, here's a quick overview of my skills:
+				<Image
+					src={heroImageLight}
+					alt="That me :)"
+					class="block dark:hidden  rounded-full  size-20 lg:size-[350px] object-cover ring-1 ring-slate-400/30 shadow"
+				/>
+				<Image
+					src={heroImageDark}
+					alt="That me :)"
+					class="hidden dark:block rounded-full size-20 lg:size-[350px] object-cover ring-1 ring-slate-400/30 shadow"
+				/>
+			</div>
+		</div>
+	</div>
 
-        <h4>Programming Languages</h4>
-        <ul class="rating-list">
-          <li>C# <Rating of={8} outOf={10} /></li>
-          <li>C++ <Rating of={7} outOf={10} /></li>
-          <li>Java <Rating of={4} outOf={10} /></li>
-          <li>Python <Rating of={5} outOf={10} /></li>
-        </ul>  
-        <h4>Applications</h4>
-        <ul class="rating-list">
-          <li>Unity <Rating of={8} outOf={10} /></li>
-          <li>Godot <Rating of={4} outOf={10} /></li>
-          <li>Unreal Engine <Rating of={2} outOf={10} /></li>
-          <li>Blender <Rating of={6} outOf={10} /></li>
-        </ul>           
-        <h4>Languages</h4>
-        <ul>
-          <li>German: Native</li>
-          <li>English: C1</li>
-          <li>Turkish: A1.1</li>
-        </ul>  
-      </p>
-    </div>
-    <div class="main">
-      <canvas class="webgl" id="threeCanvas" width="10" height="10"></canvas>
-      <p>
-        Here you can watch some boids exploring the universe. 
-        Use the left mouse button to turn the camera and the right mouse button to move the camera.
-        For more ThreeJs check out the Walkabout
-      </p>
-    </div>
-  </div>
-
-  <p slot="footer">Skybox provided by <a href="https://de.cleanpng.com/png-5qn8dm">CLEANPNG</a></p>
+	<!-- Featured articles -->
+	<div class="mx-auto lg:max-w-4xl my-16 sm:my-30">
+		<h2
+			class="text-2xl sm:text-4xl font-bold tracking-tight mb-10 sm:mb-20"
+		>
+			Featured Projects
+		</h2>
+		<FeaturedArticles />
+	</div>
 </BaseLayout>
-
-<style>
-  /*
-  Create two unequal columns that sits next to each other
-  Sidebar/left column
-  */
-  .side {
-    flex: 20%; /* Set the width of the sidebar */
-    background-color: #f1f1f1; /* Grey background color */
-    padding: 20px; /* Some padding */
-  }
-
-  .rating-list {
-    padding-right: 40px;
-    max-width: 444px;
-  }
-  .rating-list > li {
-    display: flex;
-    justify-content: space-between;
-  }
-</style>

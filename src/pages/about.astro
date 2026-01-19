@@ -1,0 +1,71 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Projects from "../components/Projects.astro";
+import NewsletterForm from "../components/NewsletterForm.astro";
+import Social from "../components/Social.astro";
+import { Icon } from "astro-icon/components";
+import EducationTimeline from "../components/EducationTimeline.astro";
+import WorkTimeline from "../components/WorkTimeline.astro";
+
+// SEO properties
+const title = "About";
+const description = "All about me";
+---
+
+<BaseLayout title={title} description={description}>
+	<div class="mx-auto max-w-2xl lg:max-w-4xl">
+		<header class="max-w-2xl">
+			<h1 class="text-4xl md:text-6xl font-black tracking-tight mb-8">
+				About Me
+			</h1>
+		</header>
+
+		<section class="max-w-2xl">
+			<div class="space-y-8 leading-8">
+				<p>
+					I'm Lenny and I'm currently busy finishing my master's
+				</p>
+			</div>
+
+			<div
+				class="sm:flex sm:items-center sm:justify-between space-y-4 sm:space-y-0 my-10"
+			>
+				<a
+					href="mailto:lorenzo@dilumenero.dev"
+					class="flex items-center space-x-1 hover:text-primary-500"
+				>
+					<Icon name="heroicons:envelope" class="size-5" />
+					<span>lennysioll@gmail.com</span>
+				</a>
+				<div class="flex items-center space-x-4">
+					<Social />
+				</div>
+			</div>
+		</section>
+
+		<section class="my-16 sm:my-30">
+			<h2
+				class="text-2xl sm:text-4xl font-bold tracking-tight mb-10 sm:mb-20"
+			>
+				Education
+			</h2>
+
+			<div>
+				<EducationTimeline />
+			</div>
+		</section>
+
+		<section class="my-16 sm:my-30">
+			<h2
+				class="text-2xl sm:text-4xl font-bold tracking-tight mb-10 sm:mb-20"
+			>
+				Work
+			</h2>
+
+			<div>
+				<WorkTimeline />
+			</div>
+		</section>
+	</div>
+
+</BaseLayout>

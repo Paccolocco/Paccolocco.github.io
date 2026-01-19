@@ -1,0 +1,44 @@
+---
+import { Icon } from "astro-icon/components";
+const timeline = [
+	{
+		date: "2025",
+		role: "Scientific Assistant at the Chair for Robotics",
+		location: "University of Würzburg",
+		description:
+			"Assistance in the development of a mobile robotic platform for the autonomous supervision of solar panels.",
+	},
+	{
+		date: "2021 - 2026",
+		role: "Scientific Assistant at the Chair for Socially Interactive Agents",
+		location: "University of Würzburg",
+		description:
+			"Development of research software and assistive supervision of student projects. Mostly working with the social robots Pepper, Lio, and Reeti.",
+	},
+	{
+		date: "2021",
+		role: "Unity Game Developer Internship",
+		location: "Playconda GmbH",
+		description:
+			"Design and development of in-game features for the mobile game Idle Lemonade Tycoon.",
+	},
+];
+---
+
+<div class="space-y-16">
+	{
+		timeline.map((item, index) => (
+			<div class="grid grid-cols-1 md:grid-cols-4">
+				<div class="text-slate-400">{item.date}</div>
+				<div class="col-span-3 flex flex-col gap-y-3">
+					<div class="font-semibold">{item.role}</div>
+					<div class="flex items-center space-x-1">
+						<Icon name="heroicons:map-pin" />
+						<span>{item.location}</span>
+					</div>
+					<div>{item.description}</div>
+				</div>
+			</div>
+		))
+	}
+</div>
