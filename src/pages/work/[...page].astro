@@ -3,7 +3,7 @@ import { getCollection } from "astro:content";
 import type { GetStaticPaths } from "astro";
 import { Icon } from "astro-icon/components";
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import ArticleCard from "../../components/articles/ArticleCard.astro";
+import ArticleCard from "../../components/articles/WorkArticleCard.astro";
 
 export const getStaticPaths = (async ({ paginate }) => {
 	const posts = (await getCollection("work")).sort(
@@ -32,9 +32,8 @@ const description =
 			</h1>
 
 			<p>
-				Tech, blood, and the occasional full moon meltdown. Sink your
-				teeth into the articles below. They won’t bite (unless I wrote
-				them after feeding time).
+				Here you can find an overview of my work. Mostly Hiwi-jobs at the University of Würzburg and an industry internship at a mobile game company. 
+				You can also take a look at the <a href="https://www.researchgate.net/profile/Lenny-Siol?ev=hdr_xprf"><u>papers</u></a> I co-authored.
 			</p>
 		</header>
 
