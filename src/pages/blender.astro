@@ -1,0 +1,72 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ImageGallery from "../components/ImageGallery.astro";
+import { Image } from "astro:assets";
+
+import "../contentCommon.css";
+
+import img1 from "../images/3dmodelling/robob.png";
+import img2 from "../images/3dmodelling/robob_render_front_2.png";
+import img3 from "../images/3dmodelling/robob_game_crop.png";
+import donut_img from "../images/3dmodelling/Donut2.png"
+import swamp from "../images/3dmodelling/swamp.png"
+import hills from "../images/3dmodelling/hills3.png"
+import arms from "../images/3dmodelling/arms_render.png"
+import grass from "../images/3dmodelling/Another Grass.png"
+import abstract from "../images/3dmodelling/2.png"
+---
+
+<BaseLayout>
+    <div class="mx-auto max-w-2xl lg:max-w-4xl">
+		<header class="max-w">
+			<h1 class="text-1xl md:text-6xl font-black tracking-tight mb-8">
+				A selection of my 3D work in Blender and Godot
+			</h1>
+		</header>
+
+
+        <ImageGallery
+            images={[
+                { src: img1, alt: "Robot Concept" },
+                { src: img2, alt: "Robot Blender" },
+                { src: img3, alt: "Robot Godot" },
+            ]}
+        />
+        <p>
+            Concept art (left) by <a href="https://aslisiol.com/"><u>Aslı Siol</u></a>, Blender render (middle), and screenshot in the Godot engine (right).
+        </p>
+
+        <Image
+            src={swamp}
+            alt="Swamp"
+        />
+        <p>
+            Procedurally generated swamp with custom water and foliage shader in Godot.
+        </p>
+
+        <Image
+            src={hills}
+            alt="Hills"
+        />
+        <p>
+            Procedurally generated hexagon environment using geometry nodes in Blender.
+        </p>
+
+        <Image
+            src={grass}
+            alt="Grass"
+        />
+        <p>
+            Procedurally generated landscape using geometry nodes in Blender.
+        </p>
+
+        <Image
+            src={abstract}
+            alt="Abstract Landscape"
+        />
+        <p>
+            Abstract landscape in Blender.
+        </p>
+	</div>
+
+</BaseLayout>
