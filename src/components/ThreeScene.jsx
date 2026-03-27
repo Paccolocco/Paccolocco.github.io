@@ -99,8 +99,8 @@ export default function ThreeScene({bgColor = "DBE9F4", ambientLightColor = "0xf
       planet_color: '#00ff00'
     };
     gui.add(params, 'speed', 0, 5, 0.1).name('Speed').onChange(update_boid_params);
-    gui.add(params, 'separation', 0, 10, 0.1).name('Separation').onChange(update_boid_params);
-    gui.add(params, 'cohesion', 0, 10, 0.1).name('Cohesion').onChange(update_boid_params);
+    gui.add(params, 'cohesion', 0, 10, 0.1).name('Separation').onChange(update_boid_params);
+    gui.add(params, 'separation', 0, 10, 0.1).name('Cohesion').onChange(update_boid_params);
     gui.add(params, 'alignment', 0, 10, 0.1).name('Alignment').onChange(update_boid_params);
     gui.add(params, 'randomness', 0, 10, 0.1).name('Randomness').onChange(update_boid_params);
     gui.addColor(params, 'color').name('Boid Color').onChange(update_boid_params);
